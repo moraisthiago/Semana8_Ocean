@@ -9,10 +9,8 @@ export default function Whale() {
   return (
     <>
       <h2>Whale</h2>
-      <Routes>
-        <Route path={`${type}/beluga`} element={<Beluga />}/>
-        <Route path={`${type}/blue  `} element={<Blue />}/>
-      </Routes>
+      {type === 'beluga' && <Beluga />}
+      {type === 'blue' && <Blue />}
     </>
   );
 }
